@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="ar_marker_bonus" size="1.000000 1.000000" />
-    <ImageTarget name="ar_marker_jump" size="1.000000 1.000000" />
-    <ImageTarget name="ar_marker_up" size="1.000000 1.000000" />
-    <ImageTarget name="ar_marker_right" size="1.000000 1.000000" />
-    <ImageTarget name="ar_marker_left" size="1.000000 1.000000" />
-    <ImageTarget name="ar_marker_down" size="1.000000 1.000000" />
+    <ImageTarget name="effect_up" size="0.100000 0.100000" />
+    <ImageTarget name="effect_down" size="0.100000 0.100000" />
+    <ImageTarget name="effect_right" size="0.100000 0.100000" />
+    <ImageTarget name="effect_jump" size="0.100000 0.100000" />
+    <ImageTarget name="effect_left" size="0.100000 0.096786" />
   </Tracking>
 </QCARConfig>

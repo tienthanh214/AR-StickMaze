@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Direction{UP, RIGHT, DOWN, LEFT}
+public enum Direction { UP, RIGHT, DOWN, LEFT, JUMP }
 
 public class Stickman : MonoBehaviour
 {
@@ -32,7 +32,7 @@ public class Stickman : MonoBehaviour
 
     // functionality
     public void changeDirection(Direction newDir)
-	{
+    {
         float rot = ((int)newDir) * 90;
         // transform.rotation = Quaternion.Euler(0, rot, 0);
         transform.Rotate(transform.up, rot);
@@ -42,8 +42,8 @@ public class Stickman : MonoBehaviour
     }
 
     public void jump()
-	{
-        
-	}
+    {
+
+    }
 
 }
