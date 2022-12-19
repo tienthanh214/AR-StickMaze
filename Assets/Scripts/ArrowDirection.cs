@@ -11,6 +11,7 @@ public class ArrowDirection : MonoBehaviour
 		if (other == null) return;
 		Stickman o = other.GetComponent<Stickman>();
 		if (o == null) return;
+		o.jump();
 		o.changeDirection(direction);
 	}
 }

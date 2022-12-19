@@ -6,6 +6,7 @@ public enum Direction { UP, RIGHT, DOWN, LEFT, JUMP }
 
 public class Stickman : MonoBehaviour
 {
+    private Animator animator;
     private Direction curDir;
     public float moveSpeed = 5f;
     public float jumpSpeed = 2f;
@@ -15,7 +16,7 @@ public class Stickman : MonoBehaviour
 
     void Start()
     {
-
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -42,8 +43,8 @@ public class Stickman : MonoBehaviour
     }
 
     public void jump()
-    {
-
+	{
+        animator.SetTrigger("IsJumping");
     }
 
 }
