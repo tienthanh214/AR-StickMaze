@@ -55,8 +55,6 @@ public class Stickman : MonoBehaviour
             jump();
 		}
         onCollideWithEffectTrigger();
-
-        Debug.Log(m_IsGrounded);
     }
 
     private void FixedUpdate()
@@ -118,6 +116,8 @@ public class Stickman : MonoBehaviour
             if (hitInfo.distance < 0.02)
             {
                 EffectTrigger effectTrigger = hitInfo.collider.gameObject.GetComponent<EffectTrigger>();
+                if (effectTrigger == null)
+                    return;
                 effectTrigger.ApplyEffect(this);
                 Debug.Log("Stickman hit effect: " + effectTrigger.effect.ToString());
             }
