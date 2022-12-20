@@ -24,7 +24,7 @@ public class Stickman : MonoBehaviour
     {
         curDir = Direction.UP;
         moveDirection = transform.forward;
-        detectCollisionWithEffectBox();
+        onCollideWithEffectTrigger();
     }
 
     private void FixedUpdate()
@@ -48,7 +48,7 @@ public class Stickman : MonoBehaviour
         animator.SetTrigger("IsJumping");
     }
 
-    private void detectCollisionWithEffectBox()
+    private void onCollideWithEffectTrigger()
     {
         Vector3 position = transform.position;
         Vector3 origin = new Vector3(position.x, position.y + 0.05f, position.z);
@@ -58,8 +58,9 @@ public class Stickman : MonoBehaviour
             Debug.DrawRay(origin, direction * 0.1f, Color.red);
             if (hitInfo.distance < 0.02)
             {
-                Debug.Log("Stickman hit effect");
-                changeDirection(Direction.RIGHT);
+                EffectTrigger effectTrigger = hitInfo.collider.gameObject.GetComponent<EffectTrigger>();
+                effectTrigger.ApplyEffect(this);
+                Debug.Log("Stickman hit effect: " + effectTrigger.effect.ToString());
             }
         }
         else

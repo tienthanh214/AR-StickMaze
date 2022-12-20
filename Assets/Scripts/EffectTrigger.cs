@@ -17,15 +17,15 @@ public class EffectTrigger : MonoBehaviour
 {
     public Effect effect;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other == null) return;
-        Stickman o = other.GetComponent<Stickman>();
-        if (o == null) return;
-        ApplyEffect(o);
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other == null) return;
+    //    Stickman o = other.GetComponent<Stickman>();
+    //    if (o == null) return;
+    //    ApplyEffect(o);
+    //}
 
-    private void ApplyEffect(Stickman stickman)
+    public void ApplyEffect(Stickman stickman)
     {
         switch (effect)
         {
