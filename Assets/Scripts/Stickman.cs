@@ -12,7 +12,7 @@ public class Stickman : MonoBehaviour
     public float jumpSpeed = 2f;
     private Vector3 moveDirection;
     public CharacterController controller;
-    // Start is called before the first frame update
+    [SerializeField] LayerMask layerMask;
 
     void Start()
     {
@@ -24,6 +24,7 @@ public class Stickman : MonoBehaviour
     {
         curDir = Direction.UP;
         moveDirection = transform.forward;
+        detectCollisionWithEffectBox();
     }
 
     private void FixedUpdate()
@@ -47,4 +48,23 @@ public class Stickman : MonoBehaviour
         animator.SetTrigger("IsJumping");
     }
 
+    private void detectCollisionWithEffectBox()
+    {
+        Vector3 position = transform.position;
+        Vector3 origin = new Vector3(position.x, position.y + 0.05f, position.z);
+        Vector3 direction = transform.TransformDirection(Vector3.forward);
+        if (Physics.Raycast(origin, direction, out RaycastHit hitInfo, 0.1f, layerMask))
+        {
+            Debug.DrawRay(origin, direction * 0.1f, Color.red);
+            if (hitInfo.distance < 0.02)
+            {
+                Debug.Log("Stickman hit effect");
+                changeDirection(Direction.RIGHT);
+            }
+        }
+        else
+        {
+            Debug.DrawRay(origin, direction * 0.1f, Color.green);
+        }
+    }
 }

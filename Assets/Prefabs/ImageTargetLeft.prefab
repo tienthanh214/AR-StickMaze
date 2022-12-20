@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2474156142157151487}
   - component: {fileID: 2474156142157151480}
   - component: {fileID: 2474156142157151481}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EffectTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
