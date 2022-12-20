@@ -55,6 +55,8 @@ public class Stickman : MonoBehaviour
             jump();
 		}
         onCollideWithEffectTrigger();
+
+        Debug.Log(m_IsGrounded);
     }
 
     private void FixedUpdate()

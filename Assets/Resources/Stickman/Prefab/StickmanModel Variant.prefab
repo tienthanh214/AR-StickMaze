@@ -44,7 +44,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroundCheckDistance: 0.1
   m_GravityMultiplier: 2
-  moveSpeed: 0.5
+  moveSpeed: 1
   jumpSpeed: 8
   controller: {fileID: 0}
   layerMask:
@@ -75,7 +75,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 025bce5d799941d44a701f34932b95e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 025bce5d799941d44a701f34932b95e5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -83,7 +83,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 025bce5d799941d44a701f34932b95e5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 025bce5d799941d44a701f34932b95e5, type: 3}
       propertyPath: m_LocalRotation.w
