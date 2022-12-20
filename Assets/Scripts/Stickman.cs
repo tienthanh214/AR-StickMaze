@@ -120,7 +120,7 @@ public class Stickman : MonoBehaviour
     private void onCollideWithEffectTrigger()
     {
         Vector3 position = transform.position;
-        Vector3 origin = new Vector3(position.x, position.y + 0.05f, position.z);
+        Vector3 origin = new Vector3(position.x, position.y + 0.05f, position.z) - transform.forward * 0.05f;
         Vector3 direction = transform.TransformDirection(Vector3.forward);
         if (Physics.Raycast(origin, direction, out RaycastHit hitInfo, 0.1f, layerMask))
         {
