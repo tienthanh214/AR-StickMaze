@@ -8,6 +8,7 @@ public class Stickman : MonoBehaviour
 {
     [SerializeField] float m_GroundCheckDistance = 0.1f;
     [Range(1f, 4f)][SerializeField] float m_GravityMultiplier = 2f;
+    [SerializeField] int HP = 1;
 
     private Animator m_Animator;
     private Direction curDir;
@@ -79,10 +80,21 @@ public class Stickman : MonoBehaviour
         m_Animator.applyRootMotion = false;
         m_GroundCheckDistance = 0.1f;
         m_Animator.SetTrigger("IsJumping");
-
     }
 
+    public void damaged(int p)
+    {
+        this.HP -= p;
+        if (this.HP <= 0)
+        {
+            die();
+        }
+    }
 
+    private void die()
+    {
+        m_Animator.SetTrigger("IsDied");
+    }
 
     void CheckGroundStatus()
 	{

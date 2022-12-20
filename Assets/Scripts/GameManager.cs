@@ -58,4 +58,13 @@ public class GameManager : MonoBehaviour
 		}
 		stickmanAlive.Clear();
 	}
+
+	public void RemoveStickman(GameObject obj)
+    {
+		if (obj != null)
+		{
+			stickmanAlive.Remove(obj);
+			Destroy(obj);
+		}
+    }
 }

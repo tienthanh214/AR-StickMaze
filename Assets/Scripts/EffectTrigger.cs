@@ -46,6 +46,7 @@ public class EffectTrigger : MonoBehaviour
                 break;
             case Effect.SPIKES:
                 // Deal emotional damage to stickman
+                stickman.damaged(1);
                 break;
         }
     }
