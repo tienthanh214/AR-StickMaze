@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 2474156142157151487}
   - component: {fileID: 2474156142157151480}
   - component: {fileID: 2474156142157151481}
-  - component: {fileID: 2474156142157151482}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EffectTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,19 +95,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2474156142157151482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2474156142157152004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c5b9516a81a37647a4412749b473914, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: 3
 --- !u!1 &2474156143366995068
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PreviewVisible: 1
   RuntimeOcclusion: 0
+  RuntimeCollider: 0
   mTrackableName: effect_left
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/AR_Seminar.xml
