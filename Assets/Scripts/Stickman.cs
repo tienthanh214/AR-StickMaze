@@ -8,6 +8,7 @@ public class Stickman : MonoBehaviour
 {
     [SerializeField] float m_GroundCheckDistance = 0.1f;
     [Range(1f, 4f)][SerializeField] float m_GravityMultiplier = 2f;
+    [SerializeField] int HP = 1;
 
     private Animator m_Animator;
     private Direction curDir;
@@ -79,10 +80,21 @@ public class Stickman : MonoBehaviour
         m_Animator.applyRootMotion = false;
         m_GroundCheckDistance = 0.1f;
         m_Animator.SetTrigger("IsJumping");
-
     }
 
+    public void damaged(int p)
+    {
+        this.HP -= p;
+        if (this.HP <= 0)
+        {
+            die();
+        }
+    }
 
+    private void die()
+    {
+        m_Animator.SetTrigger("IsDied");
+    }
 
     void CheckGroundStatus()
 	{
@@ -108,7 +120,7 @@ public class Stickman : MonoBehaviour
     private void onCollideWithEffectTrigger()
     {
         Vector3 position = transform.position;
-        Vector3 origin = new Vector3(position.x, position.y + 0.05f, position.z);
+        Vector3 origin = new Vector3(position.x, position.y + 0.05f, position.z) - transform.forward * 0.05f;
         Vector3 direction = transform.TransformDirection(Vector3.forward);
         if (Physics.Raycast(origin, direction, out RaycastHit hitInfo, 0.1f, layerMask))
         {
@@ -116,6 +128,8 @@ public class Stickman : MonoBehaviour
             if (hitInfo.distance < 0.02)
             {
                 EffectTrigger effectTrigger = hitInfo.collider.gameObject.GetComponent<EffectTrigger>();
+                if (effectTrigger == null)
+                    return;
                 effectTrigger.ApplyEffect(this);
                 Debug.Log("Stickman hit effect: " + effectTrigger.effect.ToString());
             }
