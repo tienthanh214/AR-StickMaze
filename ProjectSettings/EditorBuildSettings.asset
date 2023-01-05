@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Khoi.unity
     guid: 1a6bcb108eaf81147828970542063633
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Thanh_Demo.unity
     guid: 47099d4c2e2ef184aab494ece365df2f
+  - enabled: 1
+    path: Assets/Scenes/Map_1.unity
+    guid: 980407e4351b045419904fbb6b3a74d8
   m_configObjects: {}
