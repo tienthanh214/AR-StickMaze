@@ -12,6 +12,7 @@ public enum Effect
     RIGHT,
     SPIKES,
     TURN,
+    WIN,
 }
 
 public class EffectTrigger : MonoBehaviour
@@ -51,6 +52,9 @@ public class EffectTrigger : MonoBehaviour
                 break;
             case Effect.TURN:
                 stickman.changeDirection(transform.eulerAngles);
+                break;
+            case Effect.WIN:
+                stickman.winGame();
                 break;
         }
     }

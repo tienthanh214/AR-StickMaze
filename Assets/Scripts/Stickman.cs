@@ -103,7 +103,14 @@ public class Stickman : MonoBehaviour
     private void die()
     {
         m_Animator.SetTrigger("IsDied");
+        moveSpeed = 0;
     }
+
+    public void winGame()
+	{
+        m_Animator.SetTrigger("IsDancing");
+        moveSpeed = 0;
+	}
 
     void CheckGroundStatus()
 	{
