@@ -10,7 +10,8 @@ public enum Effect
     DOWN,
     LEFT,
     RIGHT,
-    SPIKES
+    SPIKES,
+    TURN,
 }
 
 public class EffectTrigger : MonoBehaviour
@@ -47,6 +48,9 @@ public class EffectTrigger : MonoBehaviour
             case Effect.SPIKES:
                 // Deal emotional damage to stickman
                 stickman.damaged(1);
+                break;
+            case Effect.TURN:
+                stickman.changeDirection(transform.eulerAngles);
                 break;
         }
     }

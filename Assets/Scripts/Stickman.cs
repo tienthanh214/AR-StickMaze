@@ -71,6 +71,15 @@ public class Stickman : MonoBehaviour
         curDir = newDir;
     }
 
+    public void changeDirection(Vector3 rot)
+	{
+        Debug.Log(rot.y);
+        int iter = Mathf.CeilToInt(rot.y) / 90;
+        if (Mathf.CeilToInt(Mathf.Abs(rot.y)) % 90 > 45)
+            iter++;
+        transform.rotation = Quaternion.Euler(0, iter * 90, 0);
+	}
+
     public void jump()
 	{
 
