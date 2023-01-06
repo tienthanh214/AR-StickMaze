@@ -108,7 +108,7 @@ public class Stickman : MonoBehaviour
 
     public void winGame()
 	{
-        m_Animator.SetTrigger("IsDancing");
+        m_Animator.SetBool("IsDancing", true);
         moveSpeed = 0;
 	}
 
