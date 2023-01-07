@@ -10,20 +10,22 @@ public enum Effect
     DOWN,
     LEFT,
     RIGHT,
-    SPIKES
+    SPIKES,
+    TURN,
+    WIN,
 }
 
 public class EffectTrigger : MonoBehaviour
 {
     public Effect effect;
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other == null) return;
-    //    Stickman o = other.GetComponent<Stickman>();
-    //    if (o == null) return;
-    //    ApplyEffect(o);
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other == null) return;
+        Stickman o = other.GetComponent<Stickman>();
+        if (o == null) return;
+        ApplyEffect(o);
+    }
 
     public void ApplyEffect(Stickman stickman)
     {
@@ -47,6 +49,12 @@ public class EffectTrigger : MonoBehaviour
             case Effect.SPIKES:
                 // Deal emotional damage to stickman
                 stickman.damaged(1);
+                break;
+            case Effect.TURN:
+                stickman.changeDirection(transform.eulerAngles);
+                break;
+            case Effect.WIN:
+                stickman.winGame();
                 break;
         }
     }
