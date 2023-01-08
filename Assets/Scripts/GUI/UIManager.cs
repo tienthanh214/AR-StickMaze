@@ -99,7 +99,7 @@ public class UIManager : MonoBehaviour
 			"\n> Star collected: " + starCollected.ToString());
 	}
 
-	private void ShowAlertDialog(string title, string content)
+	public void ShowAlertDialog(string title, string content)
     {
 		alertDialog.SetActive(true);
 		AlertDialog dialog = alertDialog.GetComponent<AlertDialog>();
@@ -112,9 +112,23 @@ public class UIManager : MonoBehaviour
 		dialog.content.text = content;
     }
 
-	private void HideAlertDialog()
+	public void HideAlertDialog()
     {
 		alertDialog.SetActive(false);
     }
-}
 
+	public void OnReplayPressed()
+    {
+
+    }
+
+	public void OnHomePressed()
+    {
+
+    }
+
+	public void OnNextPressed()
+    {
+
+    }
+}

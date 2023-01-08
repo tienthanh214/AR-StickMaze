@@ -7,4 +7,7 @@ public class AlertDialog : MonoBehaviour
 {
     public Text title;
     public Text content;
+    public Button homeButton;
+    public Button replayButton;
+    public Button nextButton;
 }
