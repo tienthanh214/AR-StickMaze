@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
 		nInitialStickman += n;
 		for (int i = 0; i < n; ++i)
 		{
-			float biasX = Random.Range(-0.05f, 0.05f);
+			float biasX = Random.Range(-0.02f, 0.02f);
 			float biasZ = Random.Range(-0.05f, 0.05f);
 			GameObject myModelTrf = Instantiate(stickman, new Vector3(position.x + biasX, position.y, position.z + biasZ), Quaternion.identity) as GameObject;
 			// myModelTrf.transform.localScale = scaleVector;

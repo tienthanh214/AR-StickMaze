@@ -42,10 +42,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241c43a896421ee46bfb9f4882309239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attributes:
+    moveSpeed: 0.2
+    jumpSpeed: 4
   m_GroundCheckDistance: 0.1
   m_GravityMultiplier: 2
-  moveSpeed: 0.15
-  jumpSpeed: 5
   controller: {fileID: 0}
   layerMask:
     serializedVersion: 2
