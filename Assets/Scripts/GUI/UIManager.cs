@@ -118,7 +118,7 @@ public class UIManager : MonoBehaviour
 
 	public void OnReplayPressed()
     {
-
+		GameManager.Instance.ResetGame();
     }
 
 	public void OnHomePressed()
