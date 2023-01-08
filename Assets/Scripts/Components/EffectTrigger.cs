@@ -27,7 +27,7 @@ public class EffectTrigger : MonoBehaviour
         ApplyEffect(o);
     }
 
-    public void ApplyEffect(Stickman stickman)
+    public virtual void ApplyEffect(Stickman stickman)
     {
         switch (effect)
         {

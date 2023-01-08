@@ -10,6 +10,7 @@ public class StickmanAttributes
     public float moveSpeed = 0.5f;
     public float jumpSpeed = 4f;
     private int HP = 1;
+    public int coin = 0;
 
     public bool ChangeHP(int amount)
 	{
