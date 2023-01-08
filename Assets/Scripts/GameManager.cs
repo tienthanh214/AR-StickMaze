@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
 	private readonly List<GameObject> stickmanAlive = new List<GameObject>();
 
-
+	public ParticleSystem startGame;
 	public static GameManager Instance
 	{
 		get
@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour
 			GameObject myModelTrf = Instantiate(stickman, new Vector3(position.x + biasX, position.y, position.z + biasZ), Quaternion.identity) as GameObject;
 			// myModelTrf.transform.localScale = scaleVector;
 			stickmanAlive.Add(myModelTrf);
+			Instantiate(startGame, myModelTrf.transform);
+			// show particle
 		}
 		UIManager.instance.UpdateStickmanCount(nInitialStickman);
 	}
