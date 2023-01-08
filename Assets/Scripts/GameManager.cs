@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
 			// myModelTrf.transform.localScale = scaleVector;
 			stickmanAlive.Add(myModelTrf);
 		}
+		UIManager.instance.UpdateStickmanCount(nInitialStickman);
 	}
 
 	public void ResetGame()
@@ -84,29 +85,38 @@ public class GameManager : MonoBehaviour
 
 	public void ReceiveCoin(int amount)
 	{
+		
 		coin += amount;
 		if (coin < 0) coin = 0;
+		Debug.Log(coin);
+		UIManager.instance.UpdateStarCount(coin);
 	}
 
 	private void GameOver()
 	{
 		if (nInitialStickman == 0)
 		{
-			UIManager.instance.GameOver();
+			if (stickmanAlive.Count == 0) {
+				UIManager.instance.OnLoseGame(GetCoin(), GetScore());
+            } else
+            {
+				UIManager.instance.OnWinGame(GetNumberOfStickmanAlive(), GetCoin(), GetScore());
+            }
 		}
+		UIManager.instance.UpdateStickmanCount(GetNumberOfStickmanAlive());
 	}
 
-	public int GetNumberOfStickmanAlive()
+	private int GetNumberOfStickmanAlive()
 	{
 		return stickmanAlive.Count;
 	}
 
-	public int GetCoin()
+	private int GetCoin()
 	{
 		return coin;
 	}
 
-	public int GetScore()
+	private int GetScore()
 	{
 		return coin * 5 + stickmanAlive.Count;
 	}

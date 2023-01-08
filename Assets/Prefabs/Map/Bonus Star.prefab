@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4450261774314935518}
   - component: {fileID: 4460264262304073170}
   - component: {fileID: 4333235507700141640}
+  - component: {fileID: 1679865044}
+  - component: {fileID: 1679865043}
   m_Layer: 0
   m_Name: Bonus Star
   m_TagString: Untagged
@@ -106,3 +108,29 @@ MonoBehaviour:
   endScale: {x: 0.3, y: 0.3, z: 0.3}
   scaleSpeed: 1
   scaleRate: 0.5
+--- !u!114 &1679865044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4446232976720784706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c36f8da2fd1b242bc8b685a0891205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: 0
+--- !u!65 &1679865043
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4446232976720784706}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3472726, y: 0.44943988, z: 2.2323897}
+  m_Center: {x: 0.00000011920926, y: -0.00041776904, z: 0.117841035}

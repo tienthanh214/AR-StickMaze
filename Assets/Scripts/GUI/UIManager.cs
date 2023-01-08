@@ -90,12 +90,11 @@ public class UIManager : MonoBehaviour
 			"\n> Star collected: " + starCollected.ToString());
     }
 
-	public void OnLoseGame(int stickmanReachGoal, int starCollected, int score)
+	public void OnLoseGame(int starCollected, int score)
 	{
 		PauseGame();
 		ShowAlertDialog("You Lost", "Achivement:" +
 			"\n> Total score: " + score.ToString() +
-			"\n> Stickmans reach goal: " + stickmanReachGoal.ToString() +
 			"\n> Star collected: " + starCollected.ToString());
 	}
 
