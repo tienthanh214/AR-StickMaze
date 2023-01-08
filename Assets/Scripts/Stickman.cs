@@ -110,6 +110,7 @@ public class Stickman : MonoBehaviour
 	{
         m_Animator.SetBool("IsDancing", true);
         moveSpeed = 0;
+        GameManager.instance.AchievedStickman();
 	}
 
     void CheckGroundStatus()

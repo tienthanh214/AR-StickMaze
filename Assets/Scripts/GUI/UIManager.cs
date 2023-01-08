@@ -46,4 +46,9 @@ public class UIManager : MonoBehaviour
 		Time.timeScale = 1f;
 		isGamePaused = false;
 	}
+
+	public void GameOver()
+	{
+		Debug.Log("GameOver babe");
+	}
 }
