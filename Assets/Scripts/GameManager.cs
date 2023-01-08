@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
 	public int nInitialStickman = 0;
 	private int coin = 0;
 
-	public GameObject stickman;
 	private readonly List<GameObject> stickmanAlive = new List<GameObject>();
 
 
@@ -63,6 +62,7 @@ public class GameManager : MonoBehaviour
 		}
 		stickmanAlive.Clear();
 		nInitialStickman = 0;
+		coin = 0;
 	}
 
 	public void RemoveStickman(GameObject obj)
