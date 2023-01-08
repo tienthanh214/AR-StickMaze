@@ -13,6 +13,7 @@ public enum Effect
     SPIKES,
     TURN,
     WIN,
+    COLLECT,
 }
 
 public class EffectTrigger : MonoBehaviour

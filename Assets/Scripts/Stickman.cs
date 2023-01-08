@@ -7,8 +7,8 @@ public enum Direction { UP, RIGHT, DOWN, LEFT, JUMP }
 [System.Serializable]
 public class StickmanAttributes
 {
-    public float moveSpeed = 0.5f;
-    public float jumpSpeed = 4f;
+    public float moveSpeed;
+    public float jumpSpeed;
     private int HP = 1;
 
     public bool ChangeHP(int amount)
@@ -40,7 +40,7 @@ public class StickmanAttributes
 
 public class Stickman : MonoBehaviour
 {
-    public StickmanAttributes attributes;
+    public StickmanAttributes attributes = new StickmanAttributes();
 
     [SerializeField] float m_GroundCheckDistance = 0.1f;
     [Range(1f, 4f)][SerializeField] float m_GravityMultiplier = 2f;
@@ -61,8 +61,6 @@ public class Stickman : MonoBehaviour
         m_Rigidbody = GetComponent<Rigidbody>();
         m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         m_OrigGroundCheckDistance = m_GroundCheckDistance;
-
-        attributes = new StickmanAttributes();
     }
 
     // Update is called once per frame
@@ -138,7 +136,7 @@ public class Stickman : MonoBehaviour
 	{
         m_Animator.SetBool("IsDancing", true);
         attributes.GameOver();
-        GameManager.instance.AchievedStickman();
+        GameManager.Instance.AchievedStickman();
 	}
 
     void CheckGroundStatus()
