@@ -21,6 +21,7 @@ public class GenStickmanEffect : DefaultObserverEventHandler
 
     protected override void OnTrackingFound()
     {
+        SoundManager.PlaySound("mapDetected");
         InstantiateStickman();
     }
 

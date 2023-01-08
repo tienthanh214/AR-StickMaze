@@ -116,6 +116,7 @@ public class Stickman : MonoBehaviour
         m_Animator.applyRootMotion = false;
         m_GroundCheckDistance = 0.1f;
         m_Animator.SetTrigger("IsJumping");
+        SoundManager.PlaySound("jump");
     }
 
     public void damaged(int p)
@@ -130,14 +131,16 @@ public class Stickman : MonoBehaviour
     {
         m_Animator.SetTrigger("IsDied");
         attributes.GameOver();
+        SoundManager.PlaySound("die");
     }
 
     public void winGame()
 	{
         m_Animator.SetBool("IsDancing", true);
+        SoundManager.PlaySound("win");
         attributes.GameOver();
         GameManager.Instance.AchievedStickman();
-	}
+    }
 
     void CheckGroundStatus()
 	{

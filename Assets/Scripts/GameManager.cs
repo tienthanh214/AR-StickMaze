@@ -92,6 +92,7 @@ public class GameManager : MonoBehaviour
 		if (coin < 0) coin = 0;
 		Debug.Log(coin);
 		UIManager.instance.UpdateStarCount(coin);
+		SoundManager.PlaySound("collectItem");
 	}
 
 	private void GameOver()
