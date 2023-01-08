@@ -4,23 +4,54 @@ using UnityEngine;
 
 public enum Direction { UP, RIGHT, DOWN, LEFT, JUMP }
 
-public class Stickman : MonoBehaviour
+[System.Serializable]
+public class StickmanAttributes
 {
-    [SerializeField] float m_GroundCheckDistance = 0.1f;
-    [Range(1f, 4f)][SerializeField] float m_GravityMultiplier = 2f;
-    [SerializeField] int HP = 1;
-
-    private Animator m_Animator;
-    private Direction curDir;
     public float moveSpeed = 0.5f;
     public float jumpSpeed = 4f;
+    private int HP = 1;
+
+    public bool ChangeHP(int amount)
+	{
+        HP += amount;
+        if (HP <= 0)
+		{
+            return false;
+		}
+        return true;
+	}
+
+    public void SetMoveSpeed(int speed)
+	{
+        this.moveSpeed = speed;
+	}
+
+    public void SetJumpSpeed(int speed)
+	{
+        this.jumpSpeed = speed;
+	}
+
+    public void GameOver()
+	{
+        moveSpeed = 0;
+        jumpSpeed = 0;
+	}
+}
+
+public class Stickman : MonoBehaviour
+{
+    public StickmanAttributes attributes;
+
+    [SerializeField] float m_GroundCheckDistance = 0.1f;
+    [Range(1f, 4f)][SerializeField] float m_GravityMultiplier = 2f;
+
+    private Animator m_Animator;
+
     private Vector3 moveDirection;
     public CharacterController controller;
     Rigidbody m_Rigidbody;
     float m_OrigGroundCheckDistance;
 
-
-    Vector3 m_GroundNormal;
     bool m_IsGrounded;
     [SerializeField] LayerMask layerMask;
 
@@ -28,10 +59,10 @@ public class Stickman : MonoBehaviour
     {
         m_Animator = GetComponent<Animator>();
         m_Rigidbody = GetComponent<Rigidbody>();
-        curDir = Direction.UP;
         m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         m_OrigGroundCheckDistance = m_GroundCheckDistance;
 
+        attributes = new StickmanAttributes();
     }
 
     // Update is called once per frame
@@ -43,7 +74,7 @@ public class Stickman : MonoBehaviour
         //moveDirection = Vector3.ProjectOnPlane(moveDirection, m_GroundNormal);
         if (m_IsGrounded)
 		{
-            m_Rigidbody.velocity = moveDirection * moveSpeed;
+            m_Rigidbody.velocity = moveDirection * attributes.moveSpeed;
         }
         else
 		{
@@ -68,12 +99,10 @@ public class Stickman : MonoBehaviour
     {
         float rot = ((int)newDir) * 90;
         transform.Rotate(transform.up, rot);
-        curDir = newDir;
     }
 
     public void changeDirection(Vector3 rot)
 	{
-        Debug.Log(rot.y);
         int iter = Mathf.CeilToInt(rot.y) / 90;
         if (Mathf.CeilToInt(Mathf.Abs(rot.y)) % 90 > 45)
             iter++;
@@ -83,7 +112,7 @@ public class Stickman : MonoBehaviour
     public void jump()
 	{
 
-        m_Rigidbody.AddForce(transform.up * jumpSpeed + transform.forward * (moveSpeed / 2), ForceMode.Impulse);
+        m_Rigidbody.AddForce(transform.up * attributes.jumpSpeed + transform.forward * (attributes.moveSpeed), ForceMode.Impulse);
 
         m_IsGrounded = false;
         m_Animator.applyRootMotion = false;
@@ -93,23 +122,22 @@ public class Stickman : MonoBehaviour
 
     public void damaged(int p)
     {
-        this.HP -= p;
-        if (this.HP <= 0)
-        {
+        if (attributes.ChangeHP(-p))
+		{
             die();
-        }
+		}
     }
 
     private void die()
     {
         m_Animator.SetTrigger("IsDied");
-        moveSpeed = 0;
+        attributes.GameOver();
     }
 
     public void winGame()
 	{
         m_Animator.SetBool("IsDancing", true);
-        moveSpeed = 0;
+        attributes.GameOver();
         GameManager.instance.AchievedStickman();
 	}
 
