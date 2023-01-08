@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
 	public GameObject stickman;
 	private List<GameObject> stickmanAlive = new List<GameObject>();
 
-	private static bool isGamePaused = false;
 
 	public static GameManager instance
 	{
@@ -70,31 +69,4 @@ public class GameManager : MonoBehaviour
 			Destroy(obj);
 		}
     }
-
-	public void ToggleResumeOrPause()
-    {
-		Debug.Log("Pause button pressed");
-		if (isGamePaused) ResumeGame();
-		else PauseGame();
-	}
-
-	private void PauseGame()
-	{
-		Time.timeScale = 0f;
-		isGamePaused = true;
-	}
-
-	private void ResumeGame()
-	{
-		Time.timeScale = 1f;
-		isGamePaused = false;
-	}
-
-	void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.P))
-		{
-			ToggleResumeOrPause();
-		}
-	}
 }
