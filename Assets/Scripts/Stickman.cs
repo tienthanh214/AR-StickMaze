@@ -120,7 +120,7 @@ public class Stickman : MonoBehaviour
 
     public void damaged(int p)
     {
-        if (attributes.ChangeHP(-p))
+        if (!attributes.ChangeHP(-p))
 		{
             die();
 		}
