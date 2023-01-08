@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviour
 {
 	private static GameManager _instance = null;
 
-	public int nInitialStickman = 5;
+	private int nInitialStickman = 0;
+	public int coin = 0;
 
 	public GameObject stickman;
 	private List<GameObject> stickmanAlive = new List<GameObject>();
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
 
 	public void GenerateStickman(GameObject stickman, int n, Vector3 position, Vector3 scaleVector)
 	{
+		nInitialStickman += n;
 		for (int i = 0; i < n; ++i)
 		{
 			float biasX = Random.Range(-0.05f, 0.05f);
@@ -59,6 +61,7 @@ public class GameManager : MonoBehaviour
 			Destroy(stickmanAlive[i]);
 		}
 		stickmanAlive.Clear();
+		nInitialStickman = 0;
 	}
 
 	public void RemoveStickman(GameObject obj)
@@ -66,7 +69,29 @@ public class GameManager : MonoBehaviour
 		if (obj != null)
 		{
 			stickmanAlive.Remove(obj);
+			nInitialStickman--;
 			Destroy(obj);
+			GameOver();
 		}
     }
+
+	public void AchievedStickman()
+	{
+		nInitialStickman--;
+		GameOver();
+	}
+
+	public void ReceiveCoin(int amount)
+	{
+		coin += amount;
+		if (coin < 0) coin = 0;
+	}
+
+	private void GameOver()
+	{
+		if (nInitialStickman == 0)
+		{
+			UIManager.instance.GameOver();
+		}
+	}
 }
