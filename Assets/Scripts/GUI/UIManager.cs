@@ -7,6 +7,10 @@ public class UIManager : MonoBehaviour
     private static UIManager _instance = null;
 	private static bool isGamePaused = false;
 
+	public StickmanStatusPanel stickmanStatusPanel;
+	public TitlePanel levelTitle;
+	public GameObject alertDialog;
+
 	public static UIManager instance
     {
         get
@@ -47,8 +51,84 @@ public class UIManager : MonoBehaviour
 		isGamePaused = false;
 	}
 
-	public void GameOver()
+	public void UpdateLevelTitle(int level)
+    {
+		if (levelTitle == null)
+		{
+			Debug.Log("UiManager: LevelTitle is null");
+			return;
+		}
+		levelTitle.UpdateTitle(TitlePanel.LEVEL + " " + level.ToString());
+    } 
+
+	public void UpdateStickmanCount(int count)
+    {
+		if (stickmanStatusPanel == null)
+        {
+			Debug.Log("UiManager: Stickman Status Panel is null");
+			return;
+        }
+		stickmanStatusPanel.UpdateStickmanCount(count);
+    }
+
+	public void UpdateStarCount(int count)
+    {
+		if (stickmanStatusPanel == null)
+		{
+			Debug.Log("UiManager: Stickman Status Panel is null");
+			return;
+		}
+		stickmanStatusPanel.UpdateStarCount(count);
+    }
+
+	public void OnWinGame(int stickmanReachGoal, int starCollected, int score)
+    {
+		PauseGame();
+		ShowAlertDialog("You Won", "Achivement:" +
+			"\n> Total score: " + score.ToString() +
+			"\n> Stickmans reach goal: " + stickmanReachGoal.ToString() +
+			"\n> Star collected: " + starCollected.ToString());
+    }
+
+	public void OnLoseGame(int stickmanReachGoal, int starCollected, int score)
 	{
-		Debug.Log("GameOver babe");
+		PauseGame();
+		ShowAlertDialog("You Lost", "Achivement:" +
+			"\n> Total score: " + score.ToString() +
+			"\n> Stickmans reach goal: " + stickmanReachGoal.ToString() +
+			"\n> Star collected: " + starCollected.ToString());
 	}
+
+	public void ShowAlertDialog(string title, string content)
+    {
+		alertDialog.SetActive(true);
+		AlertDialog dialog = alertDialog.GetComponent<AlertDialog>();
+		if(dialog == null)
+        {
+			Debug.Log("Alert Dialog is null");
+			return;
+        }
+		dialog.title.text = title;
+		dialog.content.text = content;
+    }
+
+	public void HideAlertDialog()
+    {
+		alertDialog.SetActive(false);
+    }
+
+	public void OnReplayPressed()
+    {
+
+    }
+
+	public void OnHomePressed()
+    {
+
+    }
+
+	public void OnNextPressed()
+    {
+
+    }
 }
