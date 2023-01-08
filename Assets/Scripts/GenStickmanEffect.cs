@@ -33,11 +33,6 @@ public class GenStickmanEffect : DefaultObserverEventHandler
     {
         if (myModelPrefab != null)
         {
-            //GameObject myModelTrf = Instantiate(myModelPrefab);
-            //// myModelTrf.transform.parent = mImageTarget.transform;
-            //myModelTrf.transform.localPosition = new Vector3(0f, startDropHeight, 0f);
-            //myModelTrf.transform.rotation = Quaternion.identity;
-            //myModelTrf.transform.localScale = new Vector3(relativeScale, relativeScale, relativeScale);
             GameManager.Instance.GenerateStickman(myModelPrefab,
                 5,
                 new Vector3(0f, startDropHeight, 0f),

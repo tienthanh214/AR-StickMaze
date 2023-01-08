@@ -6615,7 +6615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nInitialStickman: 0
-  stickman: {fileID: 0}
+  startGame: {fileID: 3123075737211501168, guid: a3f72d5f213bb7d458dfc2c4369e7acf, type: 3}
 --- !u!4 &1424939835
 Transform:
   m_ObjectHideFlags: 0
