@@ -20,7 +20,7 @@ public class StickmanDie : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.enabled = false;
-        GameManager.instance.RemoveStickman(animator.gameObject);
+        GameManager.Instance.RemoveStickman(animator.gameObject);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

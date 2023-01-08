@@ -6,14 +6,14 @@ public class GameManager : MonoBehaviour
 {
 	private static GameManager _instance = null;
 
-	private int nInitialStickman = 0;
-	public int coin = 0;
+	public int nInitialStickman = 0;
+	private int coin = 0;
 
 	public GameObject stickman;
-	private List<GameObject> stickmanAlive = new List<GameObject>();
+	private readonly List<GameObject> stickmanAlive = new List<GameObject>();
 
 
-	public static GameManager instance
+	public static GameManager Instance
 	{
 		get
 		{
@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
 	private void InitGame()
 	{
 		// GenerateStickman(stickman, nInitialStickman, Vector3.zero);
+		ResetGame();
 	}
 
 	public void GenerateStickman(GameObject stickman, int n, Vector3 position, Vector3 scaleVector)
@@ -93,5 +94,20 @@ public class GameManager : MonoBehaviour
 		{
 			UIManager.instance.GameOver();
 		}
+	}
+
+	public int GetNumberOfStickmanAlive()
+	{
+		return stickmanAlive.Count;
+	}
+
+	public int GetCoin()
+	{
+		return coin;
+	}
+
+	public int GetScore()
+	{
+		return coin * 5 + stickmanAlive.Count;
 	}
 }
