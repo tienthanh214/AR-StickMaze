@@ -6,6 +6,6 @@ public class Coin : Collectable
 {
 	public override void Use(StickmanAttributes attributes)
 	{
-		attributes.coin += 1;
+		GameManager.instance.ReceiveCoin(1);
 	}
 }

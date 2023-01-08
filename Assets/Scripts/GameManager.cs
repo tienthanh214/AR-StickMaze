@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 	private static GameManager _instance = null;
 
 	private int nInitialStickman = 0;
+	public int coin = 0;
 
 	public GameObject stickman;
 	private List<GameObject> stickmanAlive = new List<GameObject>();
@@ -78,6 +79,12 @@ public class GameManager : MonoBehaviour
 	{
 		nInitialStickman--;
 		GameOver();
+	}
+
+	public void ReceiveCoin(int amount)
+	{
+		coin += amount;
+		if (coin < 0) coin = 0;
 	}
 
 	private void GameOver()
