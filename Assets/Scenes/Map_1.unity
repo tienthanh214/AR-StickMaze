@@ -11224,6 +11224,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Title Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 3283067668495891378, guid: e240895c9632da0418a151b438714975, type: 3}
+      propertyPath: m_Text
+      value: LEVEL 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e240895c9632da0418a151b438714975, type: 3}
 --- !u!114 &3283067667256276784 stripped
