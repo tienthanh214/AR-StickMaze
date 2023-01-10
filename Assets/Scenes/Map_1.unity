@@ -158,25 +158,6 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &21790905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 21790902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 21790904}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: effect_jump
-  mDatasetName: Vuforia/AR_Seminar.xml
-  mCastedBehaviour: {fileID: 21790904}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!1001 &118025832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -570,7 +551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2333698933300633792, guid: 0f63184814541074881b844ce5ba3136, type: 3}
       propertyPath: m_Text
-      value: 
+      value: 'Tip: Find a flat ground to place cards for a stable game'
       objectReference: {fileID: 0}
     - target: {fileID: 2333698933999206412, guid: 0f63184814541074881b844ce5ba3136, type: 3}
       propertyPath: m_Text
@@ -590,7 +571,7 @@ PrefabInstance:
       objectReference: {fileID: 1799490319}
     - target: {fileID: 8908939135864800460, guid: 0f63184814541074881b844ce5ba3136, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnNextPressed
+      value: OnReplayPressed
       objectReference: {fileID: 0}
     - target: {fileID: 8908939136048623049, guid: 0f63184814541074881b844ce5ba3136, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -10796,5 +10777,6 @@ PrefabInstance:
       propertyPath: mMeshRenderer
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8971462079914679703, guid: d4e7ed12f510c50419b1a0e5fba63bf8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d4e7ed12f510c50419b1a0e5fba63bf8, type: 3}
