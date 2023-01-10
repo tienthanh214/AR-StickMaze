@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class UIManager : MonoBehaviour
 {
     private static UIManager _instance = null;
@@ -128,12 +127,15 @@ public class UIManager : MonoBehaviour
 	public void OnHomePressed()
     {
 		GameManager.Instance.ResetGame();
+		ResumeGame();
 		Destroy(gameObject);
 		SceneManager.LoadScene("Start_Menu");
 	}
 
 	public void OnNextPressed()
     {
+		int lvl = int.Parse(SceneManager.GetActiveScene().name.Substring(4)) + 1;
+		SceneManager.LoadScene("Map_" + lvl.ToString());
 
-    }
+	}
 }
