@@ -31,6 +31,8 @@ public class UIManager : MonoBehaviour
 		_instance = this;
 
 		DontDestroyOnLoad(gameObject);
+
+		ResumeGame();
 	}
 
 	public void ToggleResumeOrPause()
@@ -120,10 +122,13 @@ public class UIManager : MonoBehaviour
 	public void OnReplayPressed()
     {
 		GameManager.Instance.ResetGame();
+		ResumeGame();
     }
 
 	public void OnHomePressed()
     {
+		GameManager.Instance.ResetGame();
+		Destroy(gameObject);
 		SceneManager.LoadScene("Start_Menu");
 	}
 

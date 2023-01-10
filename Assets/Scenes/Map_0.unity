@@ -4686,7 +4686,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8971462079914679703, guid: d4e7ed12f510c50419b1a0e5fba63bf8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d4e7ed12f510c50419b1a0e5fba63bf8, type: 3}
 --- !u!1001 &1613720634
 PrefabInstance:
@@ -6200,7 +6201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2333698933300633792, guid: 0f63184814541074881b844ce5ba3136, type: 3}
       propertyPath: m_Text
-      value: 
+      value: 'Tip: Each star equal to 5 points'
       objectReference: {fileID: 0}
     - target: {fileID: 2333698933999206412, guid: 0f63184814541074881b844ce5ba3136, type: 3}
       propertyPath: m_Text
