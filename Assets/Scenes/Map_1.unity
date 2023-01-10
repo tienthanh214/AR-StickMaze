@@ -123,6 +123,41 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &21790902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6056066472549682909, guid: b0c1a9b1e4a17614a869edcbe52d6b71, type: 3}
+  m_PrefabInstance: {fileID: 1599614713}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &21790903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21790902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 21790904}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: effect_jump
+  mDatasetName: Vuforia/AR_Seminar.xml
+  mCastedBehaviour: {fileID: 21790904}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!114 &21790904 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6056066472549682904, guid: b0c1a9b1e4a17614a869edcbe52d6b71, type: 3}
+  m_PrefabInstance: {fileID: 1599614713}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21790902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1631628248, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &118025832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3739,6 +3774,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4982127149357740, guid: 41b018f12ce178147b4607881dbcdcea, type: 3}
   m_PrefabInstance: {fileID: 757793723}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &818997661 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2603797828186374625, guid: c4a91296a9683af4f8fc2dd6aefc291d, type: 3}
+  m_PrefabInstance: {fileID: 1079472321}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &820084018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5669,6 +5709,67 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 22.514185, y: 2.8251445, z: 22.592588}
   m_Center: {x: 0.059383865, y: 1.4125724, z: 0.04908801}
+--- !u!1001 &1079472321
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1539488430}
+    m_Modifications:
+    - target: {fileID: 2603797828186374625, guid: c4a91296a9683af4f8fc2dd6aefc291d, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2603797828186374625, guid: c4a91296a9683af4f8fc2dd6aefc291d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2603797828186374625, guid: c4a91296a9683af4f8fc2dd6aefc291d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2603797828186374625, guid: c4a91296a9683af4f8fc2dd6aefc291d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2603797828186374625, guid: c4a91296a9683af4f8fc2dd6aefc291d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2603797828186374625, guid: c4a91296a9683af4f8fc2dd6aefc291d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2603797828186374625, guid: c4a91296a9683af4f8fc2dd6aefc291d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2603797828186374625, guid: c4a91296a9683af4f8fc2dd6aefc291d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2603797828186374625, guid: c4a91296a9683af4f8fc2dd6aefc291d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2603797828186374625, guid: c4a91296a9683af4f8fc2dd6aefc291d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2603797828186374625, guid: c4a91296a9683af4f8fc2dd6aefc291d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339985916783032626, guid: c4a91296a9683af4f8fc2dd6aefc291d, type: 3}
+      propertyPath: effect
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6674787187426791408, guid: c4a91296a9683af4f8fc2dd6aefc291d, type: 3}
+      propertyPath: m_Name
+      value: ArrowTrigger
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c4a91296a9683af4f8fc2dd6aefc291d, type: 3}
 --- !u!1001 &1087788635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7589,6 +7690,129 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6239969156481072347, guid: b71b0f8d2f881c743a85228f3030d1cb, type: 3}
   m_PrefabInstance: {fileID: 1518733537}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1539488427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1539488430}
+  - component: {fileID: 1539488429}
+  - component: {fileID: 1539488428}
+  - component: {fileID: 1539488431}
+  m_Layer: 0
+  m_Name: MoveDirection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1539488428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539488427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StatusFilter: 2
+  UsePoseSmoothing: 0
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 3.3333333
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.3
+      value: 1
+      inSlope: 3.3333333
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  OnTargetFound:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTargetLost:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1539488429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539488427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1631628248, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PreviewVisible: 1
+  RuntimeOcclusion: 0
+  mTrackableName: effect_left
+  mInitializedInEditor: 1
+  mDataSetPath: Vuforia/AR_Seminar.xml
+  mAspectRatio: 0.96786
+  mImageTargetType: 0
+  mWidth: 0.1
+  mHeight: 0.096786
+  mRuntimeTexture: {fileID: 0}
+  mMotionHint: 1
+  mTrackingOptimization: 0
+  mTrackingOptimizationNeedsUpgrade: 0
+  mPreview: {fileID: 1539488431}
+--- !u!4 &1539488430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539488427}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.03, y: 0.0274, z: -0.281}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 818997661}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1539488431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539488427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1539488429}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: effect_left
+  mDatasetName: Vuforia/AR_Seminar.xml
+  mCastedBehaviour: {fileID: 1539488429}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &1546143111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7729,6 +7953,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6239969156481072347, guid: b71b0f8d2f881c743a85228f3030d1cb, type: 3}
   m_PrefabInstance: {fileID: 1592087872}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1599614713
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6056066472549682905, guid: b0c1a9b1e4a17614a869edcbe52d6b71, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056066472549682905, guid: b0c1a9b1e4a17614a869edcbe52d6b71, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.282
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056066472549682905, guid: b0c1a9b1e4a17614a869edcbe52d6b71, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056066472549682905, guid: b0c1a9b1e4a17614a869edcbe52d6b71, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.307
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056066472549682905, guid: b0c1a9b1e4a17614a869edcbe52d6b71, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056066472549682905, guid: b0c1a9b1e4a17614a869edcbe52d6b71, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056066472549682905, guid: b0c1a9b1e4a17614a869edcbe52d6b71, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056066472549682905, guid: b0c1a9b1e4a17614a869edcbe52d6b71, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056066472549682905, guid: b0c1a9b1e4a17614a869edcbe52d6b71, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056066472549682905, guid: b0c1a9b1e4a17614a869edcbe52d6b71, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056066472549682905, guid: b0c1a9b1e4a17614a869edcbe52d6b71, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056066472549682909, guid: b0c1a9b1e4a17614a869edcbe52d6b71, type: 3}
+      propertyPath: m_Name
+      value: ImageTargetJump
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b0c1a9b1e4a17614a869edcbe52d6b71, type: 3}
 --- !u!1001 &1610654328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8943,7 +9224,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PreviewVisible: 1
   RuntimeOcclusion: 0
-  RuntimeCollider: 0
   mTrackableName: effect_gen_stickman
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/AR_Seminar.xml

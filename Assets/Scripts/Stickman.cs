@@ -104,7 +104,7 @@ public class Stickman : MonoBehaviour
         int iter = Mathf.CeilToInt(rot.y) / 90;
         if (Mathf.CeilToInt(Mathf.Abs(rot.y)) % 90 > 45)
             iter++;
-        transform.rotation = Quaternion.Euler(0, iter * 90, 0);
+        transform.rotation = Quaternion.Euler(0, (iter - 1) * 90, 0);
 	}
 
     public void jump()
