@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
 
 	public void GenerateStickman(GameObject stickman, int n, Vector3 position, Vector3 scaleVector)
 	{
+		Debug.Log(n);
 		nInitialStickman += n;
 		for (int i = 0; i < n; ++i)
 		{

@@ -4724,6 +4724,25 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 1595970553}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!114 &1595970555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595970552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1595970553}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: effect_left
+  mDatasetName: Vuforia/AR_Seminar.xml
+  mCastedBehaviour: {fileID: 1595970553}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &1613720634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5252,7 +5271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nInitialStickman: 5
-  startGame: {fileID: 0}
+  startGame: {fileID: 3123075737211501168, guid: a3f72d5f213bb7d458dfc2c4369e7acf, type: 3}
 --- !u!4 &1799490318
 Transform:
   m_ObjectHideFlags: 0
