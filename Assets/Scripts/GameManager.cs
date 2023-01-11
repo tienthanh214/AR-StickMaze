@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 	private static GameManager _instance = null;
-
+	public GameObject grid;
 	public int nInitialStickman = 0;
 	private int coin = 0;
 
@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
 			float biasZ = Random.Range(-0.05f, 0.05f);
 			GameObject myModelTrf = Instantiate(stickman, new Vector3(position.x + biasX, position.y, position.z + biasZ), Quaternion.identity) as GameObject;
 			// myModelTrf.transform.localScale = scaleVector;
+			myModelTrf.transform.SetParent(grid.transform);
 			stickmanAlive.Add(myModelTrf);
 			Instantiate(startGame, myModelTrf.transform);
 			// show particle
