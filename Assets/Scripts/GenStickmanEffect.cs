@@ -21,24 +21,20 @@ public class GenStickmanEffect : DefaultObserverEventHandler
 
     protected override void OnTrackingFound()
     {
+        SoundManager.PlaySound("mapDetected");
         InstantiateStickman();
     }
 
 	protected override void OnTrackingLost()
 	{
-        GameManager.instance.ResetGame();
+        GameManager.Instance.ResetGame();
 	}
 
 	void InstantiateStickman()
     {
         if (myModelPrefab != null)
         {
-            //GameObject myModelTrf = Instantiate(myModelPrefab);
-            //// myModelTrf.transform.parent = mImageTarget.transform;
-            //myModelTrf.transform.localPosition = new Vector3(0f, startDropHeight, 0f);
-            //myModelTrf.transform.rotation = Quaternion.identity;
-            //myModelTrf.transform.localScale = new Vector3(relativeScale, relativeScale, relativeScale);
-            GameManager.instance.GenerateStickman(myModelPrefab,
+            GameManager.Instance.GenerateStickman(myModelPrefab,
                 5,
                 new Vector3(0f, startDropHeight, 0f),
                 new Vector3(relativeScale, relativeScale, relativeScale));
