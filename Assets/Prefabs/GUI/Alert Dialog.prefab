@@ -176,12 +176,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a quam convallis,
-    ullamcorper augue sed, consequat nisi. Nullam maximus orci eu metus pretium maximus.
-    Ut porta vestibulum iaculis. Sed aliquet mauris vitae sem vehicula, auctor efficitur
-    mi convallis. Phasellus efficitur nisi non risus lobortis, eu hendrerit elit
-    aliquet. Sed ultricies imperdiet risus, quis suscipit nibh vehicula pellentesque.
-    Donec dictum at dui at maximus.
+  m_Text: 'Tip: Each star equal to 5 points'
 --- !u!1 &2333698933533311195
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +330,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Title
+  m_Text: Pause
 --- !u!1 &2333698934040417517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,7 +1101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6611317383370202682, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6611317383370202682, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1114,7 +1109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6611317383370202682, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6611317383370202682, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1138,7 +1133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6611317383370202682, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: UpdateStarCount
+      value: ToggleResumeOrPause
       objectReference: {fileID: 0}
     - target: {fileID: 6611317383370202682, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1146,11 +1141,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6611317383370202682, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: StickmanStatusPanel, Assembly-CSharp
+      value: UIManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6611317383370202682, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6611317383370202682, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

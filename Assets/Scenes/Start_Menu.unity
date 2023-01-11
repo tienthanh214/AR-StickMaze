@@ -350,7 +350,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6611317382892952876, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_Text
-      value: LEVEL I
+      value: ZEN MODE
       objectReference: {fileID: 0}
     - target: {fileID: 6611317382892952876, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -810,7 +810,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6611317382892952876, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_Text
-      value: LEVEL V
+      value: LEVEL IV
       objectReference: {fileID: 0}
     - target: {fileID: 6611317382892952876, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -934,7 +934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6611317383370202682, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6611317383370202682, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -4612,7 +4612,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6611317382892952876, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_Text
-      value: LEVEL IV
+      value: LEVEL III
       objectReference: {fileID: 0}
     - target: {fileID: 6611317382892952876, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -10680,7 +10680,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6611317382892952876, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_Text
-      value: LEVEL III
+      value: LEVEL II
       objectReference: {fileID: 0}
     - target: {fileID: 6611317382892952876, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -10804,7 +10804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6611317383370202682, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6611317383370202682, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -12396,7 +12396,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6611317382892952876, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_Text
-      value: LEVEL II
+      value: LEVEL I
       objectReference: {fileID: 0}
     - target: {fileID: 6611317382892952876, guid: a8fdc3481ccf2ef40b983b63535096aa, type: 3}
       propertyPath: m_FontData.m_MinSize
