@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8971462079914679702}
   - component: {fileID: 8971462079914679701}
   - component: {fileID: 8971462079914679700}
-  - component: {fileID: 8971462079914679703}
   m_Layer: 0
   m_Name: ImageTargetMoveDirection
   m_TagString: Untagged
@@ -59,7 +58,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 8971462079914679703}
+  mPreview: {fileID: 8971462079914679703, guid: d4e7ed12f510c50419b1a0e5fba63bf8, type: 3}
 --- !u!114 &8971462079914679700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,25 +103,6 @@ MonoBehaviour:
   OnTargetLost:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8971462079914679703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8971462079914679699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 8971462079914679701}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: effect_left
-  mDatasetName: Vuforia/AR_Seminar.xml
-  mCastedBehaviour: {fileID: 8971462079914679701}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!1001 &8971462079804758009
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -130,6 +110,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8971462079914679702}
     m_Modifications:
+    - target: {fileID: 441274185402074403, guid: c4a91296a9683af4f8fc2dd6aefc291d, type: 3}
+      propertyPath: m_Size.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2603797828186374625, guid: c4a91296a9683af4f8fc2dd6aefc291d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -140,7 +124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2603797828186374625, guid: c4a91296a9683af4f8fc2dd6aefc291d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.0331
       objectReference: {fileID: 0}
     - target: {fileID: 2603797828186374625, guid: c4a91296a9683af4f8fc2dd6aefc291d, type: 3}
       propertyPath: m_LocalPosition.z
